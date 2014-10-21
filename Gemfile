@@ -38,3 +38,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
+gem 'simple_form'
+
+gem 'sentimental'
+gem 'twitter'
+gem 'curb'
+gem 'json'
+gem 'chartkick'
+gem "mongoid", "~> 4.0.0"
+gem 'bson_ext'
