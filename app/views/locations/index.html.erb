@@ -9,7 +9,7 @@
       <th><%= model_class.human_attribute_name(:loc_id) %></th>
       <th><%= model_class.human_attribute_name(:loc_name) %></th>
       <th><%= model_class.human_attribute_name(:zone_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -20,7 +20,7 @@
         <td><%= location.loc_id %></td>
         <td><%= location.loc_name %></td>
         <td><%= location.zone_id %></td>
-        <td><%=l location.created_at %></td>
+
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_location_path(location), :class => 'btn btn-default btn-xs' %>

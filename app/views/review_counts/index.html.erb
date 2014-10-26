@@ -7,7 +7,8 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:rest_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:rev_count) %></th>
+
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -16,7 +17,7 @@
       <tr>
         <td><%= link_to review_count.id, review_count_path(review_count) %></td>
         <td><%= review_count.rest_id %></td>
-        <td><%=l review_count.created_at %></td>
+        <td><%= review_count.rev_count %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_review_count_path(review_count), :class => 'btn btn-default btn-xs' %>
