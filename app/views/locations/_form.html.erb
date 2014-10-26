@@ -1,0 +1,12 @@
+<%= simple_form_for @location, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :loc_id %>
+  <%= error_span(@location[:loc_id]) %>
+  <%= f.input :loc_name %>
+  <%= error_span(@location[:loc_name]) %>
+  <%= f.input :zone_id %>
+  <%= error_span(@location[:zone_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                locations_path, :class => 'btn btn-default' %>
+<% end %>
