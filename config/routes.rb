@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'pages/home'
+
+  get 'pages/results'
+
+  post 'pages/results'
+  get 'pages/top_restaurants'
+
   resources :review_counts
 
   resources :reviews

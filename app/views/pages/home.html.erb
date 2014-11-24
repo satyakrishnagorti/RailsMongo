@@ -1,0 +1,29 @@
+<!--<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+-->
+
+<%= form_tag('results')  do  %>
+<center><h2>Cuisines</h2></center>
+<div id="cols" class="well" >
+        <% @cuisines.each do |a| %>
+            <font size="4"><%= radio_button_tag a,a,false   %>         <%= a%></font>
+
+        <% end %>
+</div>
+
+<center><h2>Locations in Bangalore</h2></center>
+<div class="well">
+<div class="col-md-25" >
+  <% Location.all.each do |a| %>
+
+      <font size="4" ><%= check_box_tag a.loc_name, a.loc_name %> <%= a.loc_name%></font>
+      &nbsp;
+
+  <% end%>
+</div>
+</div>
+
+
+<%= submit_tag 'Search', class: "btn btn-primary btn-lg btn-block" %>
+
+<% end %>
