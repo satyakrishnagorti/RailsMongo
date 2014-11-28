@@ -13,13 +13,13 @@
 
 <center><h2>Locations in Bangalore</h2></center>
 <div class="well">
-<div class="col-md-25" >
+<div id="cols" >
   <% Location.all.each do |a| %>
 
-      <font size="4" ><%= check_box_tag a.loc_name, a.loc_name %> <%= a.loc_name%></font>
-      &nbsp;
+      <font size="4" ><%= check_box_tag a.loc_name, a.loc_name %> <%= a.loc_name%></font></br>
 
   <% end%>
+
 </div>
 </div>
 

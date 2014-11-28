@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users
   get 'pages/home'
 
   get 'pages/results'
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
   resources :locations
 
   resources :restaurants
+  #root :to => 'pages#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

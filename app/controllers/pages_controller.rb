@@ -3,6 +3,10 @@ class PagesController < ApplicationController
     @cuisines = ['Chinese', 'North Indian', 'South Indian', 'Fast Food', 'Ice Cream', 'Bakery', 'Drinks Only']
   end
 
+  def index
+
+  end
+
   def top_restaurants
 
     @cuisines = ['Chinese', 'North Indian', 'South Indian', 'Fast Food', 'Ice Cream', 'Bakery', 'Drinks Only']
@@ -48,8 +52,9 @@ class PagesController < ApplicationController
     @location_popularity = algo2(@locations,@selected_cuisine)
     @res.each do |key, arr|
       sum = 0
-
+      counter = 0
       arr.each do |a|
+
         a = a.gsub(/[']/,"''")
         #cost = Restaurant.where("location == '"+key+"' and name == '"+a+"'").first.cost_for_two.to_i
         cx = Restaurant.where(location: key)
@@ -57,12 +62,13 @@ class PagesController < ApplicationController
           if incx.name == a
             cost = incx.cost_for_two.to_i
             sum+=cost
+            counter+=1
           end
         end
         #sum += cost
       end
 
-      avg = sum/8
+      avg = sum/counter
       @location_costs[key] = avg
       #rand(40) + 50
 

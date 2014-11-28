@@ -51,3 +51,4 @@ gem 'json'
 gem 'chartkick'
 gem "mongoid", "~> 4.0.0"
 gem 'bson_ext'
+gem 'devise'
